@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# JAX / ML artifacts
+*.pkl
+wandb/
+runs/
+
+# Training logs (保留 pretrain/，忽略 logs/)
+logs/
+
+# IDE
+.vscode/
+.idea/
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 评估输出
+pretrain/eval_*/
