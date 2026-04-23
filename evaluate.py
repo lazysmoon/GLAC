@@ -152,13 +152,6 @@ def test_model(args):
     agent.load_agent_states(load_path)
     save_dir = os.path.join(args.model_dir, f"eval_obs{args.obs}_{prefix}")
     os.makedirs(save_dir, exist_ok=True)
-    # plot_lyapunov_landscape(
-    #     agent=agent,
-    #     env=env,
-    #     bounds=[2.8, 4, 0.4, 1.5], # Adjust based on your map size
-    #     resolution=0.05,
-    #     save_path=os.path.join(save_dir, f"lyapunov_landscape.png")
-    # )
     episodes = []
     episodes_returns = []
     episode_dist2tgt = []
@@ -274,7 +267,7 @@ def main():
     # --- Environment-specific parameters (should match training) ---
     parser.add_argument("--num-agents", type=int, default=1, help="Number of agents.")
     parser.add_argument("--area-size", type=float, default=4.0, help="Size of the environment area.")
-    parser.add_argument("--obs", type=int, default=20) #12 16 20
+    parser.add_argument("--obs", type=int, default=16) #12 16 20
     parser.add_argument("--n-rays", type=int, default=32)
     
     # --- Optional features ---
