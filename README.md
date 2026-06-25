@@ -2,7 +2,7 @@
 
 Official JAX implementation of the paper:
 
-**Safe Control for Quadrotors in Cluttered Environments via Graph-based Lyapunov Reinforcement Learning**
+**Safe Control of Autonomous Mobile Robots in Cluttered Environments via Graph-based Lyapunov Reinforcement Learning**
 
 GLAC learns a safe control policy for navigation in obstacle-cluttered environments by combining a graph-based state representation with Lyapunov-constrained reinforcement learning.
 
@@ -47,9 +47,9 @@ Common options:
 ```bash
 python train.py \
     --env DubinsCar \
-    --obs 8 \
+    --obs 6 \
     --area-size 6 \
-    --seed 52
+    --seed 0
 ```
 
 Training logs and checkpoints are saved under `./logs/<env>/<algo>/seed<seed>_<timestamp>/`.
@@ -73,8 +73,8 @@ Common options:
 | `--model_dir` | Path to the checkpoint directory | `./pretrain/checkpoint` |
 | `--prefix` | Checkpoint name prefix (only used when `model_dir` holds multiple checkpoints) | `checkpoint_` |
 | `--epi` | Number of evaluation episodes | `100` |
-| `--obs` | Number of obstacles in the environment | `8` |
-| `--max_step` | Maximum steps per episode | `256` |
+| `--obs` | Number of obstacles in the environment | `6` |
+| `--max_step` | Maximum steps per episode | `200` |
 | `--seed` | Random seed | `123` |
 
 ## 📄 License
