@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+*.pkl
+wandb/
+runs/
+logs/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+pretrain/eval_*/
